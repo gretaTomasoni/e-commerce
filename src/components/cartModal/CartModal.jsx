@@ -13,7 +13,8 @@ const CartModal = ({ modalCartContext, setModalCartContext, selectedSize }) => {
     setModalCartContext({ productInfo: [], isVisible: false });
   };
 
-  const localStorageProduct = JSON.parse(localStorage.getItem("cartList"));
+  const localStorageProduct =
+    JSON.parse(localStorage.getItem("cartList")) || [];
 
   return (
     <div className="CartModal">
